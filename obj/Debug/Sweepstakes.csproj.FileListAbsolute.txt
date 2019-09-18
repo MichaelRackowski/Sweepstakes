@@ -1,0 +1,2 @@
+C:\Users\jrack\Desktop\Projects\Sweepstakes\obj\Debug\Sweepstakes.csprojAssemblyReference.cache
+C:\Users\jrack\Desktop\Projects\Sweepstakes\obj\Debug\Sweepstakes.csproj.CoreCompileInputs.cache
