@@ -10,6 +10,13 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
+            DatabaseFactory data = new DatabaseFactory();
+            data.SetDatabase();
+            MarketingFirm firm = new MarketingFirm(data.manager);
+            firm.makeSweepstakes();
         }
+
+        
+
     }
 }

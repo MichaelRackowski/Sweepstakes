@@ -27,7 +27,7 @@ namespace Sweepstakes
         public Contestant PickWinner()
         {
             Random rnd = new Random();
-            int winner = rnd.Next(0,registrationNumber);
+            int winner = rnd.Next(1,registrationNumber);
             return RegisteredContestant[winner];
            
 
@@ -37,10 +37,13 @@ namespace Sweepstakes
         {
             UserInterface.DisplayWinnerInfo(contestant);
         }
-        public void CreateAContestant()
+
+        public Contestant CreateAContestant()
         {
             Contestant contestant = new Contestant(registrationNumber);
             UserInterface.ContestantCreator(contestant);
+            return contestant;
+            
 
         }
     }

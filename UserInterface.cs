@@ -29,10 +29,18 @@ namespace Sweepstakes
         }
         public static void DisplayWinnerInfo(Contestant contestant)
         {
+            Console.WriteLine("Congrats you won!!!!");
             Console.WriteLine("First Name: " + contestant.firstname);
             Console.WriteLine("Last Name: " + contestant.lastname);
             Console.WriteLine("Email: " + contestant.email);
             Console.ReadLine();
+        }
+        public static string NamingSweepstakes()
+        {
+            Console.WriteLine("What would you like to name the Sweepstakes?");
+            string response = Console.ReadLine().ToLower();
+            return response;
+
         }
     }
 }

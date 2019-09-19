@@ -11,21 +11,21 @@ namespace Sweepstakes
         public ISweepstakesManager manager;
         public void SetDatabase()
         {
-           string response = UserInterface.DatabaseFinder();
-            switch(response)
+            string response = UserInterface.DatabaseFinder();
+            switch (response)
             {
-                case "Stack":
+                case "stack":
                     manager = new StackManager();
-                   break;
+                    break;
 
-                case "Queue":
+                case "queue":
                     manager = new QueueManager();
                     break;
                 default:
                     SetDatabase();
-                  break;
+                    break;
             }
-
+        }
             
     }
 }
