@@ -6,7 +6,26 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class DatabaseFactory
+    public class DatabaseFactory
     {
+        public ISweepstakesManager manager;
+        public void SetDatabase()
+        {
+           string response = UserInterface.DatabaseFinder();
+            switch(response)
+            {
+                case "Stack":
+                    manager = new StackManager();
+                   break;
+
+                case "Queue":
+                    manager = new QueueManager();
+                    break;
+                default:
+                    SetDatabase();
+                  break;
+            }
+
+            
     }
 }

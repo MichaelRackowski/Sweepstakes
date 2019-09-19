@@ -8,7 +8,7 @@ namespace Sweepstakes
 {
   public static class UserInterface
     {
-       public void ContestantCreator(Contestant contestant)
+       public static void ContestantCreator(Contestant contestant)
         {
             Console.WriteLine("What is your first name?");
            contestant.firstname = Console.ReadLine().ToLower();
@@ -18,10 +18,21 @@ namespace Sweepstakes
 
             Console.WriteLine("What is your email?");
             contestant.email = Console.ReadLine().ToLower();
+        }
 
-            Console.WriteLine("What is your registration number?");
-            contestant.registration = Convert.ToInt32(Console.ReadLine().ToLower());
-
+        public static string DatabaseFinder()
+        {
+            Console.WriteLine("Stack or Queue");
+            string response = Console.ReadLine().ToLower();
+            return response;
+          
+        }
+        public static void DisplayWinnerInfo(Contestant contestant)
+        {
+            Console.WriteLine("First Name: " + contestant.firstname);
+            Console.WriteLine("Last Name: " + contestant.lastname);
+            Console.WriteLine("Email: " + contestant.email);
+            Console.ReadLine();
         }
     }
 }

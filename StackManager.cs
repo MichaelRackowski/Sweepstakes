@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class StackManager
+    public class StackManager : ISweepstakesManager
     {
+        public Sweepstakes GetSweepstakes()
+        {
+
+         //Similar to contestant out of dictionary
+        }
+
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+          
+        }
     }
 }
